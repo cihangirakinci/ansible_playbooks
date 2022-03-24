@@ -1,8 +1,8 @@
 ---
-- name: Update Packages
+- name: Update Packages, Install Packages, Create and Insert lines to a file
   hosts: localhost
   tasks:
-    - name: Update all packages
+    - name: Update all "yum" packages
       yum: 
         name: '*'
         state: latest
@@ -10,11 +10,11 @@
       yum:
         name: ["vim", "tree", "wget", "curl"]
         state: latest
-    - name: Create a file
+    - name: Create an empty file
       file:
         path: /tmp/file1_ansible
         state: touch
-    - name: Add lines
+    - name: Insert lines to a file
       blockinfile:
         path: /tmp/file1_ansible
         block: |
