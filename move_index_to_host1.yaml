@@ -1,8 +1,0 @@
----
-- name: Move Index
-  hosts: host1
-  tasks:
-    - name: Move Index File to host 1
-      copy:
-        src: /root/git-repos/ansible_playbooks/index.html
-        dest: /usr/share/nginx/html/index.html
