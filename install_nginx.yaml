@@ -1,12 +1,17 @@
 ---
-- name: 
-  hosts: managed_hosts
+- name: nginx installation, start and enable
+  hosts: host1
   tasks:
     - name: Install nginx
       yum:
-        name: ["nginx"]
-        state: present
+        name: epel-release
+        state: latest
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: latest
     - name: Ensure nginx is enabled
-      service: 
+      systemd: 
         name: nginx
         state: started
+        enabled: yes
