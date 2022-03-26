@@ -1,6 +1,7 @@
 ---
 - name: nginx installation, start and enable
   hosts: host1
+  gather_fact: no
   tasks:
     - name: Install nginx
       yum:
