@@ -1,8 +1,0 @@
----
-- name: Copy Index
-  hosts: host2
-  tasks:
-    - name: Copy Index File to host 2
-      copy:
-        src: /root/git-repos/ansible_playbooks/index.html
-        dest: /var/www/html/index.html
