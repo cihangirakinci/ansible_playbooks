@@ -1,0 +1,13 @@
+---
+all: #
+  hosts: # ungrouped
+    10.108.0.2:
+    10.108.0.3:
+  children: 
+    group1:
+      hosts:
+        web1:
+          ansible_host: 10.108.0.2
+        web2:
+          ansible_host: 10.108.0.3
+

@@ -1,8 +1,8 @@
 ---
 - name: Ping all hosts
-  hosts: all
+  hosts: group1
   gather_facts: yes
   tasks:
     - name: Ping hosts
       ping:
-      when: ansible_distribution == "CentOS"  
+      #when: ansible_distribution == "CentOS"  
